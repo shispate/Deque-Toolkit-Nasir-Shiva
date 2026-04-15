@@ -1,0 +1,21 @@
+# Author:        Shiva Patel & Nasir Davis
+# File:          Makefile
+# Last Modified: 2024-14-04
+# Purpose:       Build the deque project
+
+CC     = g++
+TARGET = deque_toolkit
+CFLAGS = -c -Wall -Wextra
+OBJS   = main.o deque.o
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+main.o: main.cpp deque;h
+	$(CC) $(CFLAGS) -c main.cpp
+
+deque.o: deque.cpp deque.h
+	$(CC) $(CFLAGS) -c deque.cpp
+
+clean:
+	rm -f $(OBJS) $(TARGET)
