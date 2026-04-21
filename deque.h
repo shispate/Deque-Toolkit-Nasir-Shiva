@@ -11,6 +11,7 @@ class Deque{
   int last_block;
   int capacity;
   int mapSize;
+  int numElements;  // total elements stored
   const static int blockSize = 5;
 
  public:
