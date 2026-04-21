@@ -13,6 +13,8 @@ class Deque{
   int mapSize;
   int numElements;  // total elements stored
   const static int blockSize = 5;
+  void growFront(); // used for when blockmap runs out of room
+  void growBack();  // and needs to be resized
 
  public:
   Deque();
