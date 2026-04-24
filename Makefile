@@ -5,13 +5,13 @@
 
 CC     = g++
 TARGET = deque_toolkit
-CFLAGS = -c -Wall -Wextra
+CFLAGS = -Wall -Wextra
 OBJS   = main.o deque.o
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
 
-main.o: main.cpp deque;h
+main.o: main.cpp deque.h
 	$(CC) $(CFLAGS) -c main.cpp
 
 deque.o: deque.cpp deque.h
