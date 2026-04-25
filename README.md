@@ -31,3 +31,19 @@ When a block fills up, a new one is allocated. When the blockmap fills up, it th
 - **size()**
 - **empty()**
 - **operator[]** 
+
+## Testing
+- Basic tests: verifies push_back(), push_front(), pop_back(), pop_front(), front(), back(), and size() works with a small set of values.
+- Empty Deque tests: comfirms that pop_back() and pop_front() on an empty deque does not crash the program.
+- operator[] tests: pushes 20 elements and verifies every index returns the correct value.
+- Push back stress tests: pushes 5000 elements to the back and verifies every index, then drains from the front to ensure that it is empty.
+- Push front stress tests: does the same as back but instead drains from the back.
+- Refill test: drains the deque then refills it with push_front and verifies the order
+- Mixed push and pop: alternates the push_back and push_front to verify that it works while alternating functions, then drains both ends alternatively until it is empty.
+
+## Files included
+- main.cpp
+- deque.cpp
+- deque.h
+- Makefile
+- README.md
