@@ -41,6 +41,11 @@ When a block fills up, a new one is allocated. When the blockmap fills up, it th
 - Refill test: drains the deque then refills it with push_front and verifies the order
 - Mixed push and pop: alternates the push_back and push_front to verify that it works while alternating functions, then drains both ends alternatively until it is empty.
 
+## Division of Work
+-Nasir: README.md
+-Shiva: MakeFile main.cpp
+-both: deque.h deque.cpp 
+
 ## Files included
 - main.cpp
 - deque.cpp
